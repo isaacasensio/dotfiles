@@ -1,0 +1,18 @@
+#!/bin/bash
+# Bash wrappers for docker run commands
+
+
+# Removes all images
+function docker_rm_all_images() {
+	docker rmi $(docker images -q)
+}
+
+# Removes all containers
+function docker_rm_all_containers() {
+	docker rm $(docker ps -a -q)
+}
+
+# Stops all containers
+function docker_stop_all_containers() {
+	docker stop $(docker ps -a -q)
+}
