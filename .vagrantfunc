@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# STOP all running images
+function vagrant_stop_all() {
+	vagrant global-status | awk '/virtualbox running/{ print $5 }' | xargs -I@ bash -c 'cd @; vagrant halt'
+}
+
+# Rebuild image (destroy + create)
+function vagrant_rebuild() {
+	vagrant destroy -f; vagrant up
+}
