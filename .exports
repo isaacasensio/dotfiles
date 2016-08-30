@@ -18,3 +18,6 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Fixing when trying to commit with GPG. Error: Inappropriate ioctl for device 
+export GPG_TTY=$(tty)
