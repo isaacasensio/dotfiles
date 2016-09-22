@@ -67,6 +67,16 @@ function fs() {
 	fi;
 }
 
+# Apply git commands to all git repos inside the working directory
+function gitall() {
+	if [ $# -eq 0 ]; then
+    echo "No arguments provided. Usage: gitall pull"
+  else
+		find . -type d -name .git | xargs -n 1 dirname | xargs -I {} git -C {} "$@"
+	fi
+}
+
+
 # Use Git’s colored diff when available
 hash git &>/dev/null;
 if [ $? -eq 0 ]; then
