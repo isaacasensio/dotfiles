@@ -16,3 +16,8 @@ function docker_rm_all_containers() {
 function docker_stop_all_containers() {
 	docker stop $(docker ps -a -q)
 }
+
+# Gets container IP
+function docker_ip() {
+  docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
+}
