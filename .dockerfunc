@@ -21,3 +21,8 @@ function docker_stop_all_containers() {
 function docker_ip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
+
+# Get running containers stats with name
+function docker_stats() {
+  docker stats $(docker inspect -f "{{ .Name }}" $(docker ps -q))
+}
