@@ -102,6 +102,7 @@ brew install ngrep
 brew install tmux
 brew install CMake
 brew install gpg
+brew install mocp
 
 # Install and configure autojump
 brew install autojump
