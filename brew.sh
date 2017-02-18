@@ -101,7 +101,7 @@ brew install mplayer
 brew install ngrep
 brew install tmux
 brew install CMake
-brew install gpg
+brew install gpg gpg2 gpg-agent pinentry-mac
 brew install mocp
 
 # Install and configure autojump
