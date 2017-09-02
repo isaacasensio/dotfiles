@@ -103,6 +103,7 @@ brew install tmux
 brew install CMake
 brew install gpg gpg2 gpg-agent pinentry-mac
 brew install mocp
+brew install lftp
 
 # Install and configure autojump
 brew install autojump
