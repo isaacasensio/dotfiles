@@ -14,6 +14,7 @@ function doIt() {
 		--exclude "jdk.sh" \
 		--exclude "bash.sh" \
 		--exclude "golang.sh" \
+		--exclude "git-aliases.sh" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }
