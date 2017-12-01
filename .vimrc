@@ -14,7 +14,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'majutsushi/tagbar'
 Plugin 'valloric/youcompleteme'
 Plugin 'fatih/vim-go'
@@ -27,7 +26,7 @@ filetype plugin indent on    " required
 
 " Use the Solarized Dark theme
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 let g:solarized_termtrans=1
 
 " Make Vim more useful

@@ -1,4 +1,0 @@
-# go path
-export GOPATH=$HOME/projects/go
-export PATH=$PATH:$GOPATH/bin
-export GPG_TTY=$(tty)
