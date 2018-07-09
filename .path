@@ -1,2 +1,2 @@
 # add go path
-export PATH="{GOPATH}/bin:${PATH}"
+export PATH="${GOPATH}/bin:${PATH}"
