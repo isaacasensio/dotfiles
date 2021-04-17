@@ -14,10 +14,6 @@ tmpd() {
 	fi
 }
 
-# Make a temporary directory and enter it
-upgradecask() {
-	brew cask outdated | xargs brew cask reinstall
-}
 
 # Change working directory to the top-most Finder window location
 function cdf() { # short for `cdfinder`
