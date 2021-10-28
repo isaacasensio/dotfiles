@@ -42,17 +42,7 @@ else
   Plugin 'candycode.vim'
   Plugin 'Colour-Sampler-Pack'
   Plugin 'flazz/vim-colorschemes'
-
-  "
-  " Ruby / Rails
-  "
-  Plugin 'tpope/vim-rails'
-  Plugin 'tpope/vim-endwise'
-  Plugin 'ecomba/vim-ruby-refactoring'
-  Plugin 'nelstrom/vim-textobj-rubyblock'
-  Plugin 'jgdavey/vim-blockle'
-  Plugin 'tpope/vim-rbenv'
-  Plugin 'tpope/vim-rake'
+	Plugin 'glepnir/oceanic-material'
 
   "
   " General Editing
