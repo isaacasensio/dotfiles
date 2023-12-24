@@ -201,3 +201,13 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# restarts VPN from download-box every 60 minutes
+function restartdownloadbox() {
+	while : 
+	do 
+		ssh 192.168.30.46 "sudo systemctl restart download-box.service"
+		echo "download-box services restarted"
+		sleep 3600
+	done
+}
