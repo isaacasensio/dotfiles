@@ -116,3 +116,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 export PATH=/Users/isaac/Library/Python/3.11/bin:$PATH
+
+# Created by `pipx` on 2024-05-25 21:01:48
+export PATH="$PATH:/Users/isaac/.local/bin"
+export EDITOR="nvim"
+eval "$(zoxide init zsh)"
