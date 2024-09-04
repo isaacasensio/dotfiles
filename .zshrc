@@ -18,8 +18,8 @@ bindkey '^[[B' history-search-forward
 [[ ! -f ~/.dotfiles/.vagrantfunc ]] || source ~/.dotfiles/.vagrantfunc
 
 export PATH=/Users/isaac/Library/Python/3.11/bin:$PATH
-
-export PATH="$PATH:/Users/isaac/.local/bin"
+export PATH="$PATH:/Users/isaac/.local/bin:/usr/local/bin"
+echo $PATH
 export EDITOR="nvim"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
