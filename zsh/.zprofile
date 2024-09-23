@@ -1,4 +1,2 @@
-eval "$(/usr/local/bin/brew shellenv)"
-
 # Created by `pipx` on 2024-05-25 21:01:48
 export PATH="$PATH:/Users/isaac/.local/bin"
