@@ -49,7 +49,7 @@ sketchybar --default "${DEF_PROPS[@]}"
 
 # -- LEFT Side Items --
 source "$ITEM_DIR/apple.sh"
-source "$ITEM_DIR/spaces.sh"
+# source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
 
 # -- RIGHT Side Items --
