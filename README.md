@@ -7,6 +7,13 @@ Install each configuration package using its name. E.g:
 stow --target $HOME cmus
 ```
 
+Install bat
+```shell
+stow --target $HOME bat
+bat cache --build
+```
+
+
 Install the following fonts to render sketchybar properly:
 
 ```
