@@ -3,6 +3,8 @@ if [[ -f "/usr/local/bin/brew" ]] then
   eval "$(/usr/local/bin/brew shellenv)"
 fi
 
+TERM="xterm-256color"
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
 
