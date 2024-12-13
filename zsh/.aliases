@@ -29,6 +29,7 @@ alias lzd='lazydocker'
 alias top='btop'
 alias htop='btop'
 alias cat='bat'
+alias mc="mc --nosubshell"
 
 # Git
 alias gcm='git commit -m'
