@@ -1,25 +1,49 @@
 #!/bin/bash
 
+# Filename: ~/github/dotfiles-latest/sketchybar/felixkratz/colors.sh
 
-export ROSEWATER=0xFFf5e0dc #f5e0dc
-export FLAMINGO=0xFFf2cdcd #f2cdcd
-export PINK=0xFFf5c2e7 #f5c2e7
-export MAUVE=0xFFcba6f7 #cba6f7
-export RED=0xFFf38ba8 #f38ba8
-export MAROON=0xFFeba0ac #eba0ac
-export PEACH=0xFFfab387 #fab387
-export YELLOW=0xFFf9e2af #f9e2af
-export GREEN=0xFFa6e3a1 #a6e3a1
-export TEAL=0xFF94e2d5 #94e2d5
-export SKY=0xFF89dceb #89dceb
-export SAPPHIRE=0xFF74c7ec #74c7ec
-export BLUE=0xFF89b4fa #89b4fa
-export LAVENDER=0xFFb4befe #b4befe
+### Sonokai
+# export BLACK=0xff181819
+# export WHITE=0xffe2e2e3
+# export RED=0xfffc5d7c
+# export GREEN=0xff9ed072
+# export BLUE=0xff76cce0
+# export YELLOW=0xffe7c664
+# export ORANGE=0xfff39660
+# export MAGENTA=0xffb39df3
+# export GREY=0xff7f8490
+# export TRANSPARENT=0x00000000
+# export BG0=0xff2c2e34
+# export BG1=0xff363944
+# export BG2=0xff414550
 
-export WHITE=0xFFcdd6f4 #cdd6f4 
-export DARK_WHITE=0xFF9399b2  #9399b2
+### Catppuccin
+export BLACK=0xff181926
+export WHITE=0xffcad3f5
+export RED=0xffed8796
+export GREEN=0xffa6da95
+export BLUE=0xff8aadf4
+export YELLOW=0xffeed49f
+export ORANGE=0xfff5a97f
+export MAGENTA=0xffc6a0f6
+export GREY=0xff939ab7
+export TRANSPARENT=0x00000000
+export BG0=0xff1e1e2e
+export BG0O50=0x801e1e2e
+export BG0O60=0x991e1e2e
+export BG0O70=0xB21e1e2e
+export BG0O80=0xCC1e1e2e
+export BG0O85=0xD91e1e2e
+export BG1=0x603c3e4f
+export BG2=0x60494d64
 
-export BG_PRI_COLR=0xEE1e1e2e #1e1e2e
-export BG_SEC_COLR=0xFF313244 #313244
-
-
+# General bar colors
+export BAR_COLOR=$BG0O85
+export BAR_BORDER_COLOR=$BG2
+export BACKGROUND_1=$BG1
+export BACKGROUND_2=$BG2
+export ICON_COLOR=$WHITE  # Color of all icons
+export LABEL_COLOR=$WHITE # Color of all labels
+export POPUP_BACKGROUND_COLOR=$BAR_COLOR
+export POPUP_BORDER_COLOR=$WHITE
+export SHADOW_COLOR=$BLACK
