@@ -13,6 +13,20 @@ stow --target $HOME bat
 bat cache --build
 ```
 
+## Sketchybar
+
+To automatically hide the menu bar (bar on top)
+
+```
+osascript -e 'tell application "System Events" to set autohide menu bar of dock preferences to true'
+```
+
+```
+stow --target $HOME sketchybar
+brew services restart felixkratz/formulae/sketchybar
+sketchybar --reload
+```
+
 
 Install the following fonts to render sketchybar properly:
 
