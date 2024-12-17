@@ -2,18 +2,13 @@
 
 My dotfiles managed by GNU Stow.
 
-Install each configuration package using its name. E.g:
+Install and configure all my dot files:
 ```shell
-stow --target $HOME cmus
+./setup.sh
 ```
 
-Install bat
-```shell
-stow --target $HOME bat
-bat cache --build
-```
 
-## Sketchybar
+## Extra customizations
 
 To automatically hide the menu bar (bar on top)
 
@@ -21,18 +16,3 @@ To automatically hide the menu bar (bar on top)
 osascript -e 'tell application "System Events" to set autohide menu bar of dock preferences to true'
 ```
 
-```
-stow --target $HOME sketchybar
-brew services restart felixkratz/formulae/sketchybar
-sketchybar --reload
-```
-
-
-Install the following fonts to render sketchybar properly:
-
-```
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.23/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
-```
-```
-brew install font-space-mono-nerd-font
-```
