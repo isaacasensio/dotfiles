@@ -17,7 +17,6 @@ cpu_percent=(
   width=55
   icon.drawing=off
   update_freq=4
-  mach_helper="$HELPER"
 )
 
 cpu_sys=(
@@ -40,14 +39,36 @@ cpu_user=(
   background.color=$TRANSPARENT
 )
 
-sketchybar --add item cpu.top right              \
-           --set cpu.top "${cpu_top[@]}"         \
-                                                 \
-           --add item cpu.percent right          \
-           --set cpu.percent "${cpu_percent[@]}" \
-                                                 \
-           --add graph cpu.sys right 75          \
-           --set cpu.sys "${cpu_sys[@]}"         \
-                                                 \
-           --add graph cpu.user right 75         \
-           --set cpu.user "${cpu_user[@]}"
+CORE_COUNT=$(sysctl -n machdep.cpu.thread_count)
+CPU_INFO=$(ps -eo pcpu,user)
+CPU_SYS=$(echo "$CPU_INFO" | grep -v $(whoami) | sed "s/[^ 0-9\.]//g" | awk "{sum+=\$1} END {print sum/(100.0 * $CORE_COUNT)}")
+CPU_USER=$(echo "$CPU_INFO" | grep $(whoami) | sed "s/[^ 0-9\.]//g" | awk "{sum+=\$1} END {print sum/(100.0 * $CORE_COUNT)}")
+
+TOPPROC=$(LANG=C && ps axo "%cpu,ucomm" | sort -nr | tail +1 | head -n1 | awk '{printf "%.0f%% %s\n", $1, $2}' | sed -e 's/com.apple.//g')
+CPUP=$(echo $TOPPROC | sed -nr 's/([^\%]+).*/\1/p')
+
+CPU_PERCENT="$(echo "$CPU_SYS $CPU_USER" | awk '{printf "%.0f\n", ($1 + $2)*100}')"
+
+sketchybar --set  cpu.percent label=$CPU_PERCENT% \
+                              label.color=$COLOR  \
+           --add item cpu.percent right           \
+           --set cpu.percent "${CPU_PERCENT}"     \
+           --add item cpu.top right               \
+           --set  cpu.top     label="$TOPPROC"    \
+           --add graph cpu.sys right 75           \
+           --push cpu.sys     $CPU_SYS            \
+           --add graph cpu.user right 75          \
+           --push cpu.user    $CPU_USER
+
+# sketchybar --add item cpu.top right              \
+#            --set cpu.top "${TOPPROC}"            \
+#                                                  \
+#            --add item cpu.percent right          \
+#            --set cpu.percent "${CPU_PERCENT}"    \
+#                                                  \
+#            --add graph cpu.sys right 75          \
+#            --set cpu.sys "${CPU_SYS}"            \
+#                                                  \
+#            --add graph cpu.user right 75         \
+#            --set cpu.user "${CPU_USER}"
+
