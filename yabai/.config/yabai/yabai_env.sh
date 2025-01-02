@@ -22,7 +22,7 @@ apps_transp_ignore="(kitty)"
 
 # This keeps apps always below, seems to be working fine when I switch to other
 # apps
-apps_mgoff_below="(Calculator|iStat Menus|Hammerspoon|GIMP|Notes|Activity Monitor|App StoreSoftware Update|Stickies|Photo Booth)"
+apps_mgoff_below="(Calculator|iStat Menus|Hammerspoon|GIMP|Notes|Activity Monitor|App StoreSoftware Update|Stickies|Photo Booth|VLC)"
 
 # This keeps apps always on the top
 apps_mgoff_above="()"
