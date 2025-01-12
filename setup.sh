@@ -2,7 +2,7 @@
 set -e
 
 # Array of names to stow
-names=("bat" "btop" "git" "mc" "zsh" "sketchybar" "oh-my-posh" "wezterm" "wallpapers" "yabai" "ghostty" "karabiner" "tmux")
+names=("bat" "btop" "git" "mc" "zsh" "sketchybar" "oh-my-posh" "wezterm" "wallpapers" "yabai" "ghostty" "karabiner" "tmux" "nvim")
 
 for name in "${names[@]}"; do
     echo "Running: stow --target $HOME $name"
