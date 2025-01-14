@@ -1,0 +1,62 @@
+[default_session]
+startup_command = "nvim +GoToFile"
+
+# TODO: potential feature ideas
+# [[session]]
+# name = "session"
+# path = "~/path/to/session"
+# startup_script = "~/git_repos/dotfiles/sesh/bin/spotify.sh"
+# detached = true # never attach to this session, just create it in the background
+# tmuxp = "~/.config/tmux/tmuxp/joshmedeski.com.yml"
+# tmuxinator = "~/.config/tmux/tmuxinator/joshmedeski.com.yml"
+#
+
+[[session]]
+name = "macmon"
+path = "~/"
+startup_command = "macmon"
+
+[[session]]
+name = "update"
+path = "/tmp"
+startup_command = "update"
+
+[[session]]
+name = "btop"
+path = "/tmp"
+startup_command = "btop"
+
+[[session]]
+name = "Home 🏡"
+path = "~"
+startup_command = "l"
+
+[[session]]
+name = "Projects 💻"
+path = "~/projects"
+startup_command = "l"
+
+[[session]]
+name = "second brain 🧠"
+path = "~/c/second-brain"
+startup_command = "nvim +ObsidianToday"
+
+[[session]]
+name = "dotfiles"
+path = "~/projects/dotfiles"
+# startup_command = "u"
+
+[[session]]
+name = "tmux-fzf-url 🖇️"
+path = "~/.config/tmux/plugins/tmux-fzf-url"
+startup_command = "nvim fzf-url.sh"
+
+[[session]]
+name = "Downloads 📥"
+path = "~/Downloads"
+startup_command = "yazi"
+
+[[session]]
+name = "obsidian plugins"
+path = "~/c/second-brain/.obsidian/plugins"
+startup_command = "sesh connect (ls | fzf --ansi --no-border --preview 'glow -s light {}/README.md' --preview-window=right:85,border-none) && exit"
