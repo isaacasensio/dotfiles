@@ -103,3 +103,4 @@ if command -v sketchybar &>/dev/null; then
     fi
   }
 fi
+export PATH="/usr/local/opt/rustup/bin:$PATH"
