@@ -32,6 +32,11 @@ path = "~/projects/dotfiles"
 startup_command = "nvim ."
 
 [[session]]
+name = "homelab"
+path = "~/projects/homelab"
+startup_command = "nvim ."
+
+[[session]]
 name = "Downloads 📥"
 path = "~/Downloads"
 startup_command = "yazi"
