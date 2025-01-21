@@ -121,7 +121,7 @@
                                 ],
                                 "description": "Open -a 'ChatGPT.app'",
                                 "from": {
-                                    "key_code": "semicolon",
+                                    "key_code": "c",
                                     "modifiers": { "mandatory": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'ChatGPT.app'" }],
@@ -137,7 +137,7 @@
                                 ],
                                 "description": "Open -a 'System Settings.app'",
                                 "from": {
-                                    "key_code": "quote",
+                                    "key_code": "s",
                                     "modifiers": { "mandatory": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'System Settings.app'" }],
@@ -153,7 +153,7 @@
                                 ],
                                 "description": "Open -a 'Visual Studio Code.app'",
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "v",
                                     "modifiers": { "mandatory": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
@@ -199,12 +199,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'WezTerm.app'",
+                                "description": "Open -a 'Ghostty.app'",
                                 "from": {
-                                    "key_code": "w",
+                                    "key_code": "g",
                                     "modifiers": { "mandatory": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'WezTerm.app'" }],
+                                "to": [{ "shell_command": "open -a 'Ghostty.app'" }],
                                 "type": "basic"
                             }
                         ]
@@ -1492,7 +1492,7 @@
                 ]
             },
             "name": "Default",
-            "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
 }

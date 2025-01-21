@@ -43,49 +43,15 @@ const rules: KarabinerRules[] = [
     ],
   },
 
-  // I couldn't get this work with the magic mouse because it only detects button1 in the karabiner event viewer
-  // You need to enable pro mode in karabiner for the work with the apple mouse
-  // It works with the logitech mouse tough
-  // {
-  //   description: "Simultaneous Left and Right Click to Cmd+Shift+S",
-  //   manipulators: [
-  //     {
-  //       type: "basic",
-  //       parameters: {
-  //         "basic.simultaneous_threshold_milliseconds": 500
-  //       },
-  //       from: {
-  //         simultaneous: [
-  //           { "pointing_button": "button1" },
-  //           { "pointing_button": "button2" }
-  //         ],
-  //         simultaneous_options: {
-  //           detect_key_down_uninterruptedly: true,
-  //           key_down_order: "strict",
-  //           key_up_order: "strict",
-  //           key_up_when: "all"
-  //         }
-  //       },
-  //       to: [
-  //         {
-  //           key_code: "s",
-  //           modifiers: ["left_command", "left_shift"]
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-
   ...createHyperSubLayers({
     // I use spacebar as the app launcher
     spacebar: {
       o: app("Obsidian"),
-      semicolon: app("ChatGPT"),
-      quote: app("System Settings"),
-      c: app("Visual Studio Code"),
+      c: app("ChatGPT"),
+      s: app("System Settings"),
+      v: app("Visual Studio Code"),
       b: app("Firefox"),
       f: app("Finder"),
-      w: app("WezTerm"),
       g: app("Ghostty"),
 
       // Below I'm just leaving comments of the shortcuts I specifically use on
@@ -197,64 +163,6 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      // Restart yabai
-      0: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=5EC0D2D3-869C-4284-B063-B53A17BF7C4C"
-      ),
-      // Start video recording
-      8: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=24E07831-252B-4EB6-B6C4-5E1CDB742BF9"
-      ),
-      // Stop video recording
-      9: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=762AF6E2-41EE-4B74-A2D3-9B96C3D777B5"
-      ),
-      // comma: {
-      //   to: [
-      //     {
-      //       shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "LG TV"; /opt/homebrew/bin/SwitchAudioSource -t input -s "C922 Pro Stream Webcam"`,
-      //     },
-      //   ],
-      // },
-      // Change audio source to mac mini
-      comma: {
-        to: [
-          {
-            shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "Mac mini Speakers"; /opt/homebrew/bin/SwitchAudioSource -t input -s "C922 Pro Stream Webcam"`,
-          },
-        ],
-      },
-      // Change audio source to macbook pro Speakers
-      period: {
-        to: [
-          {
-            shell_command: `/opt/homebrew/bin/SwitchAudioSource -s "MacBook Pro Speakers"; /opt/homebrew/bin/SwitchAudioSource -t input -s "MacBook Pro Microphone"`,
-          },
-        ],
-      },
-      // n: open(
-      //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      // ),
-    },
-
-    // For betterTouchTool
-    d: {
-      // Select text from alacritty
-      j: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=5A708885-4D65-465C-B87A-996BA6C23B86"
-      ),
-      // Paste alacritty text and go down
-      k: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=CBAA9D60-831D-4315-A6B8-195B8F179C26"
-      ),
-      // Paste kodekloud text and go down
-      l: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=3FD931CD-45A8-4AAF-8D73-A9C0E5C41A60"
-      ),
-      // Reboot router
-      u: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=EA461EE0-4C15-4113-93B6-07C12086FF1F"
-      ),
     },
 
      // t = "tmux" - I use these to navigate to my different tmux sessions
@@ -265,70 +173,13 @@ const rules: KarabinerRules[] = [
       h: open(
         "btt://execute_assigned_actions_for_trigger/?uuid=F431526A-E836-451C-BD36-67AB7DF7CAC2"
       ),
-      // dotfiles-latest
-      j: open(
+      // dotfiles
+      period: open(
         "btt://execute_assigned_actions_for_trigger/?uuid=E2BEB425-38A3-46D8-AAF8-067CA979D4FB"
       ),
-      // watusy
-      k: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=7B386F00-BDBD-448F-A413-E37952E219A7"
-      ),
-      // linkarzu.github.io
+      // homelab
       l: open(
         "btt://execute_assigned_actions_for_trigger/?uuid=1893BEBE-DC99-41CC-9BE6-74B66E3BBB2C"
-      ),
-      // scripts
-      semicolon: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=9E98F83C-C4C4-4B9B-AFF7-03AAAF2939A5"
-      ),
-      // containerdata
-      y: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=27E17BF8-1B16-41BF-A7C1-3DAF6B706340"
-      ),
-      // containerdata_nfs
-      p: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=55A10BEE-B776-4D93-B5ED-024A58595D93"
-      ),
-      // obsidian_main
-      u: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=2FF1FD5D-72C2-42CA-B6AD-05A4DC3CEE0C"
-      ),
-      // php
-      i: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=03F1E256-FF80-43BA-873C-195628FA5996"
-      ),
-      // containerdata-public
-      o: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=13ED33CA-99DF-4782-BDA6-E01BF3FF0DCC"
-      ),
-      // Find
-      n: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=92398D5C-B95F-4E31-9CB9-1E3E732AF1C0"
-      ),
-      // Find goto
-      m: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=88FB8FF9-6237-45FE-8717-675540891749"
-      ),
-      // daily note
-      r: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=9B82DF9D-2DE2-4872-903A-D3C17EE9D555"
-      ),
-      // // I tried to replace BetterTouchTool by directly calling the script,
-      // // but couldn't make it work
-      // r: {
-      //   to: [
-      //     {
-      //       shell_command: `~/github/dotfiles-latest/scripts/macos/mac/300-dailyNote.sh`,
-      //     },
-      //   ],
-      // },
-      // open karabiner rules.ts file
-      e: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=3DEAE844-CD5B-4695-A58D-AC7CFA935D46"
-      ),
-      // Golang dir
-      open_bracket: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=70963A3C-7982-4BB4-A8E0-5181EC216383"
       ),
     },
 
