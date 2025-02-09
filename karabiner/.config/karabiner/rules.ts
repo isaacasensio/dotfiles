@@ -45,7 +45,7 @@ const rules: KarabinerRules[] = [
 
   ...createHyperSubLayers({
     // I use spacebar as the app launcher
-    spacebar: {
+    a: {
       o: app("Obsidian"),
       c: app("ChatGPT"),
       s: app("System Settings"),
