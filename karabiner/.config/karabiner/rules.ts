@@ -53,6 +53,7 @@ const rules: KarabinerRules[] = [
       b: app("Firefox"),
       f: app("Finder"),
       g: app("Ghostty"),
+      t: app("Things3"),
 
       // Below I'm just leaving comments of the shortcuts I specifically use on
       // apps in case I need to configure them on a new computer
