@@ -33,52 +33,36 @@ yabai -m rule --add app="^${apps_mgoff_above}$" manage=off sub-layer=above
 #                          Custom padding settings
 ###############################################################################
 
-# Sketchybar size changes depending if I'm on my laptop or mac mini, solving it
-# this way, there may be a better way but this was the easiest to solve for now
-# I only change the paddings if yabai is installed, otherwise I use default
-# paddings
-if command -v sketchybar &>/dev/null; then
-  # Check the display size (e.g., grab the resolution here)
-  display_resolution=$(system_profiler SPDisplaysDataType | grep Resolution)
-  # First condition is to match my macbook pro, the * are used as wildcards
-  if [[ "$display_resolution" == *"3456 x 2234"* ]]; then
-    # yabai -m config top_padding 12
-    yabai -m config top_padding 17
-    yabai -m config bottom_padding 5
-    yabai -m config left_padding 5
-    yabai -m config right_padding 5
-    # Resolution LG 34
-  elif [[ "$display_resolution" == *"3440 x 1440"* ]]; then
-    yabai -m config top_padding 34
-    yabai -m config bottom_padding 5
-    yabai -m config left_padding 5
-    yabai -m config right_padding 5
-  else
-    # # This matches my asus 27 inch monitor
-    # # yabai -m config top_padding 39
-    yabai -m config top_padding 43
-    yabai -m config bottom_padding 5
-    yabai -m config left_padding 5
-    yabai -m config right_padding 5
+# In order to prevent simple-bar freezing upon yabai restart, you'll need to add
+# this line at the start of your .yabairc file
+# https://www.jeantinland.com/toolbox/simple-bar/documentation/installation/#update-your-yabai-config
+osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
 
-    # # For videos thumbnails
-    # yabai -m config top_padding 400
-    # yabai -m config bottom_padding 20
-    # yabai -m config left_padding 500
-    # yabai -m config right_padding 100
-
-    # For youtube thumbnails
-    # yabai -m config right_padding 500
-
-    # For youtube posts and neomemes
-    # yabai -m config right_padding 800
-
-    # For shorts
-    # yabai -m config bottom_padding 400
-  fi
+# Simple-bar size changes depending on the laptop I use. There may be a better way but this was the easiest to solve for now
+# I only change the paddings if yabai is installed, otherwise I use default paddings
+# Check the display size (e.g., grab the resolution here)
+display_resolution=$(system_profiler SPDisplaysDataType | grep Resolution)
+# First condition is to match my macbook pro, the * are used as wildcards
+if [[ "$display_resolution" == *"3456 x 2234"* ]]; then
+  # yabai -m config top_padding 12
+  yabai -m config top_padding 17
+  yabai -m config bottom_padding 5
+  yabai -m config left_padding 5
+  yabai -m config right_padding 5
+  # Resolution LG 34
+elif [[ "$display_resolution" == *"3440 x 1440"* ]]; then
+  yabai -m config top_padding 34
+  yabai -m config bottom_padding 5
+  yabai -m config left_padding 5
+  yabai -m config right_padding 5
 else
-  yabai -m config top_padding 02
-  yabai -m config bottom_padding 00
+  # # This matches my asus 27 inch monitor
+  # # yabai -m config top_padding 39
+  yabai -m config top_padding 43
+  yabai -m config bottom_padding 5
+  yabai -m config left_padding 5
+  yabai -m config right_padding 5
+
 fi
 
 ###############################################################################
