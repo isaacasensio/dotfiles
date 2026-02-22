@@ -5,9 +5,9 @@ set -e
 names=("bat" "btop" "git" "mc" "zsh" "oh-my-posh" "wallpapers" "yabai" "ghostty" "karabiner" "tmux" "nvim" "yazi" "sesh")
 
 for name in "${names[@]}"; do
-    echo "Running: stow --target $HOME $name"
-    stow --target "$HOME" "$name"
-    echo "Successfully stowed: $name"
+  echo "Running: stow --target $HOME $name"
+  stow --target "$HOME" "$name"
+  echo "Successfully stowed: $name"
 done
 
 echo "Rebuilding bat cache file"
