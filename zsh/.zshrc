@@ -104,3 +104,6 @@ if command -v sketchybar &>/dev/null; then
   }
 fi
 export PATH="/usr/local/opt/rustup/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/isaac/.antigravity/antigravity/bin:$PATH"
