@@ -2,7 +2,7 @@
 set -e
 
 # Array of names to stow
-names=("bat" "btop" "git" "mc" "zsh" "ubersicht" "oh-my-posh" "wallpapers" "yabai" "ghostty" "karabiner" "tmux" "nvim" "yazi" "sesh")
+names=("bat" "btop" "git" "mc" "zsh" "oh-my-posh" "wallpapers" "yabai" "ghostty" "karabiner" "tmux" "nvim" "yazi" "sesh")
 
 for name in "${names[@]}"; do
     echo "Running: stow --target $HOME $name"
@@ -27,11 +27,5 @@ cp -f /tmp/musikcube_catpppuccin/themes $HOME/.config/musikcube
 echo "Installing the wallpaper"
 m wallpaper $HOME/.config/wallpapers/nice-blue-background.png
 echo "Successfully installed the wallpaper"
-
-echo "Install simple-bar"
-git clone git@github.com:Jean-Tinland/simple-bar.git  $HOME/.config/ubersicht/widgets/simple-bar
-osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
-echo "Successfully reloaded ubersicht"
-
 
 echo "All commands completed successfully."
