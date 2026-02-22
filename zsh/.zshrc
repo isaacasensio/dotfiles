@@ -72,6 +72,12 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 [[ ! -f ~/.functions ]] || source ~/.functions
 [[ ! -f ~/.vagrantfunc ]] || source ~/.vagrantfunc
 
+# Work related Customizations
+if [ -d ~/.dotfiles-work ]; then
+  [[ ! -f ~/.dotfiles-work/.aliases ]] || source ~/.dotfiles-work/.aliases
+  [[ ! -f ~/.dotfiles-work/.functions ]] || source ~/.dotfiles-work/.functions
+fi
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
