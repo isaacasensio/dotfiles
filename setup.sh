@@ -25,7 +25,7 @@ git clone git@github.com:EdenQwQ/musikcube.git /tmp/musikcube_catpppuccin
 cp -f /tmp/musikcube_catpppuccin/themes $HOME/.config/musikcube
 
 echo "Installing the wallpaper"
-m wallpaper $HOME/.config/wallpapers/nice-blue-background.png
+m wallpaper --set $HOME/.config/wallpapers/nice-blue-background.png
 echo "Successfully installed the wallpaper"
 
 echo "All commands completed successfully."
