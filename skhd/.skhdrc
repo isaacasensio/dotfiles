@@ -1,0 +1,7 @@
+# App launcher shortcuts
+# open -a focuses the app if already running, launches it if not
+
+ctrl + cmd - b : open -a "Firefox"
+ctrl + cmd - return : open -a "Ghostty"
+ctrl + cmd - o : open -a "Obsidian"
+ctrl + cmd - s : open -a "Slack"
